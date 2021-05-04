@@ -16,9 +16,12 @@ Alternatively, [download a release](https://github.com/auraphp/Aura.Cli/releases
 
 ### Quality
 
+<!--
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/auraphp/Aura.Cli/badges/quality-score.png?b=develop-2)](https://scrutinizer-ci.com/g/auraphp/Aura.Cli/)
 [![Code Coverage](https://scrutinizer-ci.com/g/auraphp/Aura.Cli/badges/coverage.png?b=develop-2)](https://scrutinizer-ci.com/g/auraphp/Aura.Cli/)
 [![Build Status](https://travis-ci.org/auraphp/Aura.Cli.png?branch=develop-2)](https://travis-ci.org/auraphp/Aura.Cli)
+-->
+[![Build Status](https://travis-ci.com/zorf2a/Aura.Cli.svg?branch=3.x)](https://travis-ci.com/zorf2a/Aura.Cli)
 
 To run the unit tests at the command line, issue `composer install` and then `phpunit` at the package root. This requires [Composer](http://getcomposer.org/) to be available as `composer`, and [PHPUnit](http://phpunit.de/manual/) to be available as `phpunit`.
 
