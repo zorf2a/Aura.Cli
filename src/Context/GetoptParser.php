@@ -231,7 +231,7 @@ class GetoptParser
 
         return $this->longOptionRequiresValue($option, $value, $name)
             || $this->longOptionRejectsValue($option, $value, $name)
-            || $this->setValue($option, trim($value) === '' ? true : $value);
+            || $this->setValue($option, trim((string) $value) === '' ? true : $value);
     }
 
     /**
@@ -272,7 +272,7 @@ class GetoptParser
      */
     protected function longOptionRequiresValue($option, $value, $name = null)
     {
-        if ($option->param == 'required' && trim($value) === '') {
+        if ($option->param == 'required' && trim((string) $value) === '') {
             if ($name !== null) {
                 $this->errors[] = new Exception\OptionParamRequired(
                     "The option '$name' requires a parameter."
@@ -298,7 +298,7 @@ class GetoptParser
      */
     protected function longOptionRejectsValue($option, $value, $name)
     {
-        if ($option->param == 'rejected' && trim($value) !== '') {
+        if ($option->param == 'rejected' && trim((string) $value) !== '') {
             $this->errors[] = new Exception\OptionParamRejected(
                 "The option '$name' does not accept a parameter."
             );
